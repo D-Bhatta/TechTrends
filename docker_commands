@@ -1,0 +1,35 @@
+## Docker commands used to build the application
+docker build --tag techtrends:v1.0.0.0 .
+
+## Docker commands used to run the application
+docker run --detach --publish 7111:3111 techtrends:v1.0.0.0
+
+## Docker commands used to get the application logs
+docker logs 4ee9367bfa0e
+
+## Logs from the container running the TechTrends application
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+WARNING: 2021-12-02 19:39:58,874,  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO: 2021-12-02 19:39:58,874,  * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
+INFO: 2021-12-02 19:40:42,465, 172.17.0.1 - - [02/Dec/2021 19:40:42] "GET / HTTP/1.1" 200 -
+INFO: 2021-12-02 19:40:43,166, 172.17.0.1 - - [02/Dec/2021 19:40:43] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO: 2021-12-02 19:40:43,597, 172.17.0.1 - - [02/Dec/2021 19:40:43] "GET /favicon.ico HTTP/1.1" 404 -
+INFO: 2021-12-02 19:40:51,478, About us page retrieved
+INFO: 2021-12-02 19:40:51,483, 172.17.0.1 - - [02/Dec/2021 19:40:51] "GET /about HTTP/1.1" 200 -
+INFO: 2021-12-02 19:40:51,746, 172.17.0.1 - - [02/Dec/2021 19:40:51] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO: 2021-12-02 19:40:53,681, 172.17.0.1 - - [02/Dec/2021 19:40:53] "GET / HTTP/1.1" 200 -
+INFO: 2021-12-02 19:40:54,161, 172.17.0.1 - - [02/Dec/2021 19:40:54] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO: 2021-12-02 19:41:15,033, 172.17.0.1 - - [02/Dec/2021 19:41:15] "GET / HTTP/1.1" 200 -
+INFO: 2021-12-02 19:41:15,305, 172.17.0.1 - - [02/Dec/2021 19:41:15] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO: 2021-12-02 19:41:16,101, 172.17.0.1 - - [02/Dec/2021 19:41:16] "GET /favicon.ico HTTP/1.1" 404 -
+INFO: 2021-12-02 19:41:23,485, Article retrieved: 2020 CNCF Annual Report
+INFO: 2021-12-02 19:41:23,490, 172.17.0.1 - - [02/Dec/2021 19:41:23] "GET /1 HTTP/1.1" 200 -
+INFO: 2021-12-02 19:41:24,236, 172.17.0.1 - - [02/Dec/2021 19:41:24] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO: 2021-12-02 19:41:30,662, 172.17.0.1 - - [02/Dec/2021 19:41:30] "GET /metrics HTTP/1.1" 200 -
+INFO: 2021-12-02 19:41:35,167, 172.17.0.1 - - [02/Dec/2021 19:41:35] "GET /health HTTP/1.1" 404 -
+INFO: 2021-12-02 19:41:38,779, 172.17.0.1 - - [02/Dec/2021 19:41:38] "GET /healthz HTTP/1.1" 200 -
