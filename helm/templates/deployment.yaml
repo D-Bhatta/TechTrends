@@ -40,11 +40,11 @@ spec:
             httpGet:
               path: "{{.Values.livenessProbe.path}}"
               port: !!int "{{.Values.livenessProbe.port}}"
-              initialDelaySeconds: 30
-              periodSeconds: 3
+            initialDelaySeconds: 30
+            periodSeconds: 3
           readinessProbe:
             httpGet:
               path: "{{.Values.readinessProbe.path}}"
               port: !!int "{{.Values.readinessProbe.port}}"
-              initialDelaySeconds: 30
-              periodSeconds: 3
+            initialDelaySeconds: 30
+            periodSeconds: 3
