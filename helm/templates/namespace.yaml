@@ -1,0 +1,8 @@
+---
+# namespace.yaml
+apiVersion: v1
+kind: Namespace
+metadata:
+  labels:
+    app: techtrends
+  name: "{{.Values.namespace.name}}"

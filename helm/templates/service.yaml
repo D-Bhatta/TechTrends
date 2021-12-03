@@ -1,0 +1,17 @@
+---
+# service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: techtrends
+  name: techtrends
+  namespace: "{{.Values.namespace.name}}"
+spec:
+  ports:
+    - port: !!int "{{.Values.service.port}}"
+      protocol: "{{.Values.service.protocol}}"
+      targetPort: !!int "{{.Values.service.targetPort}}"
+  selector:
+    app: techtrends
+  type: "{{.Values.service.type}}"
