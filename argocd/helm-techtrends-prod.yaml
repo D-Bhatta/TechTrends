@@ -13,6 +13,6 @@ spec:
     helm:
       valueFiles:
         - values-prod.yaml
-    path: argocd-helm/helm
-    repoURL: https://github.com/D-Bhatta/python-helloworld-test-build
+    path: helm/
+    repoURL: https://github.com/D-Bhatta/TechTrends
     targetRevision: HEAD

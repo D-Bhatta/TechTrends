@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: python-helloworld
+  name: techtrends-staging
   namespace: argocd
 spec:
   destination:
@@ -12,7 +12,7 @@ spec:
   source:
     helm:
       valueFiles:
-        - values.yaml
-    path: argocd-helm/helm
-    repoURL: https://github.com/D-Bhatta/python-helloworld-test-build
+        - values-staging.yaml
+    path: helm/
+    repoURL: https://github.com/D-Bhatta/TechTrends
     targetRevision: HEAD
