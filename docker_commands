@@ -1,8 +1,9 @@
 ## Docker commands used to build the application
-docker build --tag techtrends:v1.0.0.0 .
+docker build --tag techtrends:v1.0.0.3 .
+<!-- This is from within the Techtrends (project) directory -->
 
 ## Docker commands used to run the application
-docker run --detach --publish 7111:3111 techtrends:v1.0.0.0
+docker run --detach --publish 7111:3111 techtrends:v1.0.0.3
 
 ## Docker commands used to get the application logs
 docker logs 4ee9367bfa0e

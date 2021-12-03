@@ -35,7 +35,6 @@ def get_post(post_id):
 
 def get_num_connections():
     # Return number of connections
-    log_connection("Get number of connections")
     connection = get_db_connection()
     num_connections_list = connection.execute(
         "SELECT COUNT(id) FROM numconnections"
@@ -43,12 +42,11 @@ def get_num_connections():
     connection.close()
     num_connections = [item for item in num_connections_list][0]
     # Since there is a logging connection for every logged connection
-    return num_connections * 2
+    return num_connections
 
 
 def get_num_posts():
     # Return the number of posts
-    log_connection("Get number of posts")
     connection = get_db_connection()
     num_posts_list = connection.execute(
         "SELECT COUNT(id) FROM posts"

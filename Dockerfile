@@ -1,7 +1,7 @@
 FROM python:3.10
 LABEL maintainer="Debabrata Bhattacharya"
 
-COPY . /app
+COPY /techtrends /app
 WORKDIR /app
 RUN python -m pip install -r requirements.txt
 RUN python init_db.py
