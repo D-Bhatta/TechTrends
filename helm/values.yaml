@@ -3,6 +3,9 @@
 namespace:
   name: sandbox
 
+app:
+  name: techtrends
+
 service:
   port: 4111
   targetPort: 3111
@@ -13,9 +16,11 @@ image:
   repository: dbhatta/techtrends
   tag: latest
   imagePullPolicy: IfNotPresent
+  name: techtrends
 
 ports:
   containerPort: 3111
+  protocol: TCP
 
 replicaCount: 1
 
@@ -29,5 +34,7 @@ resources:
 
 livenessProbe:
   path: /healthz
+  port: 3111
 readinessProbe:
   path: /healthz
+  port: 3111
