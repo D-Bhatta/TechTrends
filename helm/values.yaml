@@ -15,7 +15,7 @@ image:
   imagePullPolicy: IfNotPresent
 
 ports:
-    containerPort: 3111
+  containerPort: 3111
 
 replicaCount: 1
 
@@ -28,6 +28,6 @@ resources:
     memory: 128Mi
 
 livenessProbe:
-    path: /healthz
+  path: /healthz
 readinessProbe:
-    path: /healthz
+  path: /healthz
