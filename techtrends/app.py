@@ -47,6 +47,7 @@ def get_num_connections():
 
 def get_num_posts():
     # Return the number of posts
+    log_connection("Get number of posts")
     connection = get_db_connection()
     num_posts_list = connection.execute(
         "SELECT COUNT(id) FROM posts"
